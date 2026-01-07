@@ -1,0 +1,24 @@
+:root {
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #0B0F19;
+  --card-bg: #111827;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --primary: #4F46E5;
+  --accent: #22D3EE;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg: #FFFFFF;
+  --card-bg: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --primary: #4F46E5;
+  --accent: #22D3EE;
+}
