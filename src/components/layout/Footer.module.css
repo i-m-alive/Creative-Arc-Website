@@ -1,0 +1,45 @@
+.footer {
+  background: var(--card-bg);
+  padding: 64px 24px 32px;
+  margin-top: 96px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.brand h3 {
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.brand p {
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--text-primary);
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}

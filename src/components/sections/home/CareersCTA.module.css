@@ -1,0 +1,21 @@
+.section {
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+}

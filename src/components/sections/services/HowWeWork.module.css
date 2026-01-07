@@ -1,0 +1,25 @@
+.section {
+  padding: 96px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+.steps {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.steps li {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 500;
+}

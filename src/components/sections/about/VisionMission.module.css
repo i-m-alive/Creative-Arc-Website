@@ -1,0 +1,25 @@
+.section {
+  padding: 96px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.section h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

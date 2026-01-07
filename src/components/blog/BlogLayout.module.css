@@ -1,0 +1,24 @@
+.article {
+  max-width: 800px;
+  margin: 96px auto;
+  padding: 0 24px;
+}
+
+.meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.content {
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+.content h2 {
+  margin-top: 32px;
+}
+
+.content p {
+  margin-top: 16px;
+}

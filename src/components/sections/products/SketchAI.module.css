@@ -1,0 +1,38 @@
+.section {
+  padding: 96px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+.section p {
+  margin-top: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.features {
+  margin-top: 32px;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.features li {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-radius: 999px;
+  font-size: 14px;
+}

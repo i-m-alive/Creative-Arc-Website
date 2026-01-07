@@ -1,0 +1,28 @@
+.section {
+  padding: 96px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+.card {
+  margin-top: 40px;
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

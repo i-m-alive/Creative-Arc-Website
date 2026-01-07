@@ -1,0 +1,32 @@
+.section {
+  padding: 96px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+.section p {
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  text-decoration: none;
+  cursor: not-allowed;
+}
