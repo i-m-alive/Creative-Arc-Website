@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Culture.module.css";
 
 const points = [

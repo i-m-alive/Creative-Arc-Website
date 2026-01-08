@@ -1,0 +1,28 @@
+.section {
+  padding: 96px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(2,6,23,0.95),
+    rgba(2,6,23,1)
+  );
+}
+
+.grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 32px;
+  text-align: center;
+}
+
+.metric strong {
+  font-size: 36px;
+  color: white;
+}
+
+.metric span {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-secondary);
+}

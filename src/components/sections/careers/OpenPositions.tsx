@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./OpenPositions.module.css";
 
 export default function OpenPositions() {
@@ -6,11 +8,15 @@ export default function OpenPositions() {
       <h2>Open Positions</h2>
 
       <div className={styles.card}>
-        <p className={styles.title}>No open positions at the moment</p>
+        <p className={styles.title}>No open roles at the moment</p>
         <p className={styles.text}>
-          We currently do not have any active job openings.
-          As we grow and launch new initiatives, opportunities
-          will be posted here.
+          We don’t have any active job openings right now.
+          As we expand our team and launch new initiatives,
+          opportunities will be published here.
+        </p>
+
+        <p className={styles.note}>
+          Follow us on LinkedIn to stay updated.
         </p>
       </div>
     </section>

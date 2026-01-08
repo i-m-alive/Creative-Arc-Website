@@ -48,20 +48,17 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      // BACKEND READY
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Something went wrong.");
+      if (!res.ok) throw new Error();
 
       setSuccess("Thank you! Your message has been sent.");
       setForm({ name: "", email: "", message: "" });
-    } catch (err) {
+    } catch {
       setError("Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
@@ -104,11 +101,11 @@ export default function ContactForm() {
         {success && <p className={styles.success}>{success}</p>}
 
         <button
-        type="submit"
-        className={styles.submitButton}
-        disabled={loading}
+          type="submit"
+          className={styles.submitButton}
+          disabled={loading}
         >
-        {loading ? "Sending..." : "Submit"}
+          {loading ? "Sending..." : "Submit"}
         </button>
       </form>
     </section>

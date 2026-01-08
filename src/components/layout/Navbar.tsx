@@ -2,52 +2,91 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { useTheme } from "@/context/ThemeContext";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
 
+  /* Theme-aware logo */
+  const logoSrc =
+    theme === "dark"
+      ? "/brand/creative-arc-services-light.svg"
+      : "/brand/creative-arc-services-dark.svg";
+
+  const navItems = [
+    "About",
+    "Services",
+    "Products",
+    "Solutions",
+    "Blog",
+    "Careers",
+    "Contact",
+  ];
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        {/* Brand */}
-        <div className={styles.brand}>
-          <Link href="/" onClick={closeMenu}>
-            CreativeArc
-          </Link>
-        </div>
+        {/* BRAND */}
+        <Link
+          href="/"
+          onClick={closeMenu}
+          className={styles.brand}
+          aria-label="Creative Arc Services home"
+        >
+          <img
+            src={logoSrc}
+            alt="Creative Arc Services"
+            className={styles.logo}
+            loading="eager"
+          />
+        </Link>
 
-        {/* Desktop Links */}
+        {/* DESKTOP LINKS */}
         <ul className={styles.links}>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/products">Products</Link></li>
-          <li><Link href="/solutions">Solutions</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
-          <li><Link href="/careers">Careers</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-          
+          {navItems.map((item) => {
+            const path = `/${item.toLowerCase()}`;
+            const active = isActive(path);
 
+            return (
+              <li key={item}>
+                <Link
+                  href={path}
+                  className={`${styles.navLink} ${
+                    active ? styles.active : ""
+                  }`}
+                >
+                  {item}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
-        {/* Actions */}
+        {/* ACTIONS */}
         <div className={styles.actions}>
           <button
             onClick={toggleTheme}
             className={styles.themeToggle}
-            aria-label="Toggle theme"
+            aria-label="Toggle color theme"
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
 
-          {/* Hamburger */}
+          {/* HAMBURGER */}
           <button
             className={styles.hamburger}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -58,15 +97,23 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
-        <Link href="/about" onClick={closeMenu}>About</Link>
-        <Link href="/services" onClick={closeMenu}>Services</Link>
-        <Link href="/products" onClick={closeMenu}>Products</Link>
-        <Link href="/solutions" onClick={closeMenu}>Solutions</Link>
-        <Link href="/blog" onClick={closeMenu}>Blog</Link>
-        <Link href="/careers" onClick={closeMenu}>Careers</Link>
-        <Link href="/contact" onClick={closeMenu}>Contact</Link>
+        {navItems.map((item) => {
+          const path = `/${item.toLowerCase()}`;
+          const active = isActive(path);
+
+          return (
+            <Link
+              key={item}
+              href={path}
+              onClick={closeMenu}
+              className={active ? styles.activeMobile : ""}
+            >
+              {item}
+            </Link>
+          );
+        })}
       </div>
     </header>
   );

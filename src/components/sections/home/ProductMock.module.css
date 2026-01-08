@@ -1,0 +1,44 @@
+.section {
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.mock {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  background: #020617;
+  border-radius: 16px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #64748b;
+  border-radius: 50%;
+}
+
+.canvas {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 999px;
+  font-size: 13px;
+  color: white;
+}

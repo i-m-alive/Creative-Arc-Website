@@ -4,7 +4,7 @@ import ContactInfo from "@/components/sections/contact/ContactInfo";
 import ContactForm from "@/components/sections/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | CreativeArc",
   description:
     "Get in touch with CreativeArc to discuss AI solutions, products, collaborations, or opportunities.",
 };

@@ -1,25 +1,32 @@
 .section {
-  padding: 96px 24px;
+  padding: 120px 24px;
+}
+
+.grid {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-.section h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  padding: 40px;
+  border-radius: 20px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.section p {
-  color: var(--text-secondary);
-  line-height: 1.6;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.35);
 }
 
-@media (max-width: 768px) {
-  .section {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+.card h3 {
+  margin-bottom: 16px;
+  font-size: 22px;
 }

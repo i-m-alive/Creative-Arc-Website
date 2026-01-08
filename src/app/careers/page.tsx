@@ -5,9 +5,9 @@ import HackathonPlaceholder from "@/components/sections/careers/HackathonPlaceho
 import Culture from "@/components/sections/careers/Culture";
 
 export const metadata: Metadata = {
-  title: "Careers",
+  title: "Careers | CreativeArc",
   description:
-    "Explore career opportunities, hackathons, and life at CreativeArc. Build meaningful AI systems with us.",
+    "Explore careers, hackathons, and life at CreativeArc. Build meaningful AI systems with purpose and responsibility.",
 };
 
 export default function CareersPage() {

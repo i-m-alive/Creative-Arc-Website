@@ -4,6 +4,7 @@ import OurStory from "@/components/sections/about/OurStory";
 import VisionMission from "@/components/sections/about/VisionMission";
 import CoreValues from "@/components/sections/about/CoreValues";
 import AIPhilosophy from "@/components/sections/about/AIPhilosophy";
+import AboutCTA from "@/components/sections/about/AboutCTA";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <VisionMission />
       <CoreValues />
       <AIPhilosophy />
+      <AboutCTA />
     </main>
   );
 }

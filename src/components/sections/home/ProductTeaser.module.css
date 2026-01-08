@@ -1,10 +1,8 @@
 .section {
-  padding: 96px 24px;
-  background: linear-gradient(
-    135deg,
-    rgba(79, 70, 229, 0.15),
-    rgba(34, 211, 238, 0.15)
-  );
+  padding: 120px 24px;
+  background:
+    radial-gradient(circle at center, rgba(79,70,229,0.18), transparent 70%),
+    linear-gradient(180deg, transparent, rgba(2,6,23,0.9));
 }
 
 .content {
@@ -15,16 +13,18 @@
 
 .badge {
   display: inline-block;
-  margin-top: 24px;
-  padding: 8px 16px;
+  margin-top: 32px;
+  padding: 8px 18px;
   border-radius: 999px;
-  background: var(--primary);
-  color: white;
-  font-size: 14px;
+  background: rgba(79,70,229,0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 72px 16px;
+    padding: 96px 16px;
   }
 }

@@ -6,20 +6,11 @@ import BlogLayout from "@/components/blog/BlogLayout";
 
 export const dynamic = "force-static";
 
-/**
- * Required for static generation of dynamic routes
- */
 export function generateStaticParams() {
   const posts = getAllPosts();
-
-  return posts.map((post: any) => ({
-    slug: post.slug,
-  }));
+  return posts.map((post: any) => ({ slug: post.slug }));
 }
 
-/**
- * ✅ FIXED: params is async in Next.js 15
- */
 export async function generateMetadata({
   params,
 }: {
@@ -34,9 +25,6 @@ export async function generateMetadata({
   };
 }
 
-/**
- * ✅ FIXED: params must be awaited
- */
 export default async function BlogPost({
   params,
 }: {
@@ -58,7 +46,7 @@ export default async function BlogPost({
         />
       </BlogLayout>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

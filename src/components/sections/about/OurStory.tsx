@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./OurStory.module.css";
 
 export default function OurStory() {
@@ -5,9 +7,12 @@ export default function OurStory() {
     <section className={styles.section}>
       <h2>Our Story</h2>
       <p>
-        CreativeArc was founded with a simple belief: AI should simplify life,
-        not complicate it. We focus on building practical, real-world AI systems
-        instead of experimental demos.
+        CreativeArc was founded with a simple belief: Artificial Intelligence
+        should solve real problems, not create complexity.
+      </p>
+      <p>
+        We focus on building AI systems that are practical, scalable, and aligned
+        with human values — combining engineering rigor with thoughtful design.
       </p>
     </section>
   );

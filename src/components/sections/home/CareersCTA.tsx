@@ -5,8 +5,8 @@ export default function CareersCTA() {
     <section className={styles.section}>
       <h2>Build the Future of AI With Us</h2>
       <p>
-        Join our hackathons, internships, and innovation programs designed for
-        curious minds.
+        Join our hackathons, internships, and innovation programs designed
+        for curious, impact-driven minds.
       </p>
       <a href="/careers" className={styles.cta}>
         Explore Careers

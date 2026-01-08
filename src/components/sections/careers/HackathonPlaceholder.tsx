@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./HackathonPlaceholder.module.css";
 
 export default function HackathonPlaceholder() {
@@ -6,22 +8,18 @@ export default function HackathonPlaceholder() {
       <h2>Hackathons & Innovation Programs</h2>
 
       <p>
-        CreativeArc regularly organizes hackathons and innovation-driven
-        programs for students, developers, and AI enthusiasts.
+        CreativeArc regularly hosts hackathons and innovation-driven programs
+        for students, developers, and AI enthusiasts.
       </p>
 
       <p className={styles.note}>
-        Our upcoming hackathon will be announced soon.
-        Participation details and registration links will be available here.
+        Our first flagship hackathon is currently being planned.
+        Details and registration links will be announced here.
       </p>
 
-      <a
-        href="#"
-        className={styles.button}
-        aria-disabled="true"
-      >
+      <span className={styles.button}>
         Hackathon Website (Coming Soon)
-      </a>
+      </span>
     </section>
   );
 }

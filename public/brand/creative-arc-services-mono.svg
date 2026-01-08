@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200">
+  <g transform="translate(48,48)">
+    <path d="M48 96 C48 32, 144 20, 216 72" fill="none" stroke="#000000" stroke-width="12" stroke-linecap="round"></path>
+    <circle cx="216" cy="72" r="6" fill="#000000"></circle>
+  </g>
+
+  <g transform="translate(320,92)">
+    <text x="0" y="0" font-size="48" font-weight="600" fill="#000000">
+      Creative Arc
+    </text>
+    <text x="2" y="34" font-size="18" letter-spacing="2" fill="#333333">
+      SERVICES
+    </text>
+  </g>
+</svg>

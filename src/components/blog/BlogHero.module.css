@@ -1,0 +1,40 @@
+.hero {
+  position: relative;
+  padding: 140px 24px 120px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -200px;
+  background: radial-gradient(
+    circle at top,
+    rgba(79,70,229,0.22),
+    transparent 65%
+  );
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 16px 96px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}

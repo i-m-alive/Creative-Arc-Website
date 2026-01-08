@@ -1,6 +1,8 @@
+"use client";
+
 import styles from "./WhyCreativeArc.module.css";
 
-const reasons = [
+const points = [
   "Purpose-driven AI innovation",
   "Human-centered design philosophy",
   "Precision-first engineering",
@@ -12,11 +14,24 @@ export default function WhyCreativeArc() {
     <section className={styles.section}>
       <h2>Why CreativeArc</h2>
 
-      <ul className={styles.list}>
-        {reasons.map((item) => (
-          <li key={item}>{item}</li>
+      <div className={styles.list}>
+        {points.map((text) => (
+          <div
+            key={text}
+            className={styles.item}
+            tabIndex={0}
+            onMouseMove={(e) => {
+              const r = e.currentTarget.getBoundingClientRect();
+              e.currentTarget.style.setProperty(
+                "--x",
+                `${e.clientX - r.left}px`
+              );
+            }}
+          >
+            {text}
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

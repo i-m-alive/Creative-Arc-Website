@@ -1,13 +1,15 @@
+"use client";
+
 import styles from "./CareersHero.module.css";
 
 export default function CareersHero() {
   return (
     <section className={styles.hero}>
-      <h1>Careers at CreativeArc</h1>
+      <span className={styles.badge}>Careers</span>
+      <h1>Build the Future of AI With Us</h1>
       <p>
-        We are building intelligent AI systems that matter.
-        If you are curious, driven, and love solving real problems —
-        CreativeArc is the place to grow.
+        We’re building intelligent systems that solve real-world problems.
+        If you value learning, ownership, and responsible AI — you’ll fit right in.
       </p>
     </section>
   );

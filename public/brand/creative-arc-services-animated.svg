@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200">
+  <defs>
+    <linearGradient id="animGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"></stop>
+      <stop offset="100%" stop-color="#22D3EE"></stop>
+    </linearGradient>
+  </defs>
+
+  <path d="M96 128 C96 40, 200 28, 280 88" fill="none" stroke="url(#animGrad)" stroke-width="12" stroke-linecap="round" stroke-dasharray="460" stroke-dashoffset="460">
+    <animate attributeName="stroke-dashoffset" from="460" to="0" dur="0.9s" fill="freeze"></animate>
+  </path>
+
+  <circle cx="280" cy="88" r="6" fill="#22D3EE">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"></animate>
+  </circle>
+</svg>

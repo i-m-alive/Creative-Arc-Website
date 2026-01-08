@@ -3,9 +3,11 @@ import "./globals.css";
 import "@/styles/variables.css";
 import "@/styles/animations.css";
 import "@/styles/responsive.css";
-
+import CursorGlow from "@/components/ui/CursorGlow";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BrandLoader from "@/components/ui/BrandLoader";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "CreativeArc Services Private Limited" }],
   creator: "CreativeArc",
-  metadataBase: new URL("https://creativearc.ai"), // change later to real domain
+  metadataBase: new URL("https://creativearc.ai"),
   openGraph: {
     title: "CreativeArc – AI Solutions That Simplify Everyday Life",
     description:
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "CreativeArc",
     images: [
       {
-        url: "/og-image.png", // we’ll add this later
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "CreativeArc AI",
@@ -65,8 +67,18 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
+            <ScrollProgress />
+          <CursorGlow />
+          {/* Brand intro loader */}
+          <BrandLoader />
+
+          {/* Global navigation */}
           <Navbar />
+
+          {/* Page content */}
           {children}
+
+          {/* Global footer */}
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,22 +1,41 @@
 .hero {
-  padding: 120px 24px;
+  position: relative;
+  padding: 160px 24px 140px;
+  text-align: center;
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.hero h1 {
-  font-size: 48px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -300px;
+  background:
+    radial-gradient(circle at top, rgba(79,70,229,0.22), transparent 60%),
+    linear-gradient(180deg, #020617, #020617);
+  z-index: -2;
 }
 
-.hero p {
-  margin-top: 16px;
-  font-size: 18px;
+.badge {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(79,70,229,0.15);
   color: var(--text-secondary);
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 36px;
-  }
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-inline: auto;
 }

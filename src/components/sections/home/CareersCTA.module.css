@@ -1,21 +1,55 @@
 .section {
-  padding: 96px 24px;
+  position: relative;
+  padding: 120px 24px;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Soft radial glow for emotional pull */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(79, 70, 229, 0.18),
+      transparent 70%
+    );
+  z-index: -1;
+}
+
+.section h2 {
+  font-size: 40px;
+}
+
+.section p {
+  margin-top: 16px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-secondary);
 }
 
 .cta {
   display: inline-block;
-  margin-top: 32px;
-  padding: 14px 32px;
+  margin-top: 40px;
+  padding: 14px 36px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   border-radius: var(--radius);
   text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(79, 70, 229, 0.35);
 }
 
 @media (max-width: 640px) {
   .cta {
     width: 100%;
-    text-align: center;
   }
 }
